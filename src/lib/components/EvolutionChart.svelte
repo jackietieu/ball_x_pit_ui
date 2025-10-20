@@ -3,6 +3,7 @@
   import { starterBalls } from "../../constants/starterBalls.js";
   import assetMap from "../assetMap.js";
   import GridItem from "./GridItem.svelte";
+  import GridIcon from "./GridIcon.svelte";
 
   const { gridSize = 16 } = $props();
 
@@ -23,29 +24,20 @@
         {#if cell.x === cell.y}
           <span style="color: var(--yellow); font-size: 2em;">X</span>
         {:else if cell.x === 0}
-          <div class="flex flex-col items-center">
-            <img
-              src={assetMap.ballIcons[yBall]}
-              alt={`${cell.x}, ${cell.y}`}
-              class="w-full h-full object-contain rounded"
-            />
-          </div>
+          <GridIcon 
+            src={assetMap.ballIcons[yBall]}
+            alt={`${cell.x}, ${cell.y}`}
+          />
         {:else if cell.y === 0}
-          <div class="flex flex-col items-center">
-            <img
-              src={assetMap.ballIcons[xBall]}
-              alt={`${cell.x}, ${cell.y}`}
-              class="w-full h-full object-contain rounded"
-            />
-          </div>
+          <GridIcon 
+            src={assetMap.ballIcons[xBall]}
+            alt={`${cell.x}, ${cell.y}`}
+          />
         {:else if evolution}
-          <div class="flex flex-col items-center">
-            <img
-              src={assetMap.ballIcons[evolution]}
-              alt={`${cell.x}, ${cell.y}`}
-              class="w-full h-full object-contain rounded"
-            />
-          </div>
+          <GridIcon 
+            src={assetMap.ballIcons[evolution]}
+            alt={`${cell.x}, ${cell.y}`}
+          />
         {/if}
       </GridItem>
     {/each}
