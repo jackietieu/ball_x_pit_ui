@@ -3,6 +3,7 @@
 
   const cellClasses = $derived(
     [
+      "p-0.5",
       "w-13 h-13",
       "flex items-center justify-center",
       "transition-all duration-200",
