@@ -1,6 +1,6 @@
 import type { BallIconKey } from '../types/ballIcons.ts';
 
-export const starterBalls: BallIconKey[] = [
+export const starterBalls = [
   'bleed',
   'broodMother',
   'burn',
@@ -17,4 +17,4 @@ export const starterBalls: BallIconKey[] = [
   'poison',
   'vampire',
   'wind'
-];
+] as const satisfies BallIconKey[];
