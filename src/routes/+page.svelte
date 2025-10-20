@@ -24,7 +24,7 @@
       {#each row as cell}
         <GridItem x={cell.x} y={cell.y}>
           {#if cell.x === cell.y}
-            X
+            <span style="color: var(--yellow); font-size: 2em;">X</span>
           {:else if cell.x === 0}
             <div class="flex flex-col items-center">
               <img
@@ -45,46 +45,5 @@
         </GridItem>
       {/each}
     {/each}
-  </div>
-
-  <!-- Asset Map Demo -->
-  <div class="mt-8 space-y-6">
-    <h2 class="text-lg font-bold text-white">Asset Map Demo:</h2>
-
-    <!-- All Ball Icons using Object.entries() -->
-    <div>
-      <h3 class="text-md font-semibold text-gray-300 mb-2">All Ball Icons:</h3>
-      <div class="grid grid-cols-8 gap-4">
-        {#each Object.entries(assetMap.ballIcons) as [key, imagePath]}
-          <div class="flex flex-col items-center">
-            <img
-              src={imagePath}
-              alt={key}
-              class="w-12 h-12 rounded border border-[var(--border-dark)]"
-            />
-            <span class="text-xs text-gray-400 mt-1 text-center">{key}</span>
-          </div>
-        {/each}
-      </div>
-    </div>
-
-    <!-- Using Object.keys() method -->
-    <div>
-      <h3 class="text-md font-semibold text-gray-300 mb-2">
-        First 10 Icons (using Object.keys()):
-      </h3>
-      <div class="flex gap-4 items-center flex-wrap">
-        {#each Array.from(starterBalls) as key}
-          <div class="flex flex-col items-center">
-            <img
-              src={assetMap.ballIcons[key]}
-              alt={key}
-              class="w-12 h-12 rounded border border-[var(--border-dark)]"
-            />
-            <span class="text-xs text-gray-400 mt-1">{key}</span>
-          </div>
-        {/each}
-      </div>
-    </div>
   </div>
 </div>

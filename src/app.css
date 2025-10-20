@@ -2,9 +2,10 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-	--bg-dark: #271217;
-	--bg-dark-hover: #452a30;
-	--border-dark: #633c24;
+  --bg-dark: #271217;
+  --bg-dark-hover: #452a30;
+  --border-dark: #633c24;
+  --yellow: #fdfe1f;
 
-	background: var(--bg-dark);
+  background: var(--bg-dark);
 }

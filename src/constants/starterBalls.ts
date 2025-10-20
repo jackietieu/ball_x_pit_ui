@@ -13,6 +13,8 @@ export const starterBalls: BallIconKey[] = [
   'laserHorizontal',
   'laserVertical',
   'light',
+  'lightning',
   'poison',
+  'vampire',
   'wind'
 ];
