@@ -1,7 +1,7 @@
 <script>
   const { children = null, x, y } = $props();
 
-  const _cellClasses = $derived(
+  const cellClasses = $derived(
     [
       "w-13 h-13",
       "flex items-center justify-center",
@@ -17,6 +17,6 @@
   );
 </script>
 
-<div class={_cellClasses} role="gridcell" title="({x}, {y})">
+<div class={cellClasses} role="gridcell" title="({x}, {y})">
   {@render children()}
 </div>

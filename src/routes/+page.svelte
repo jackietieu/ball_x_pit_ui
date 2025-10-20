@@ -1,15 +1,5 @@
 <script>
-  import GridItem from "$lib/components/GridItem.svelte";
-  import assetMap from "$lib/assetMap.js";
-  import { starterBalls } from "../constants/starterBalls.ts";
-  import { evolutions } from "../constants/evolutions.ts";
-
-  const gridSize = 16;
-  const grid = $derived(
-    Array.from({ length: gridSize }, (_, y) =>
-      Array.from({ length: gridSize }, (_, x) => ({ x, y }))
-    )
-  );
+  import EvolutionChart from "$lib/components/EvolutionChart.svelte";
 </script>
 
 <div class="mt-8 flex flex-col items-center">
@@ -20,42 +10,5 @@
     Hover over cells to display more information.
   </p>
 
-  <div class="grid grid-cols-16 gap-0 w-fit p-2">
-    {#each grid as row}
-      {#each row as cell}
-        {@const xBall = starterBalls[cell.x - 1]}
-        {@const yBall = starterBalls[cell.y - 1]}
-        {@const evolution = evolutions[xBall]?.[yBall]?.evolution}
-        <GridItem x={cell.x} y={cell.y}>
-          {#if cell.x === cell.y}
-            <span style="color: var(--yellow); font-size: 2em;">X</span>
-          {:else if cell.x === 0}
-            <div class="flex flex-col items-center">
-              <img
-                src={assetMap.ballIcons[yBall]}
-                alt={`${cell.x}, ${cell.y}`}
-                class="w-12 h-12 rounded"
-              />
-            </div>
-          {:else if cell.y === 0}
-            <div class="flex flex-col items-center">
-              <img
-                src={assetMap.ballIcons[xBall]}
-                alt={`${cell.x}, ${cell.y}`}
-                class="w-12 h-12 rounded"
-              />
-            </div>
-          {:else if evolution}
-            <div class="flex flex-col items-center">
-              <img
-                src={assetMap.ballIcons[evolution]}
-                alt={`${cell.x}, ${cell.y}`}
-                class="w-12 h-12 rounded"
-              />
-            </div>
-          {/if}
-        </GridItem>
-      {/each}
-    {/each}
-  </div>
+  <EvolutionChart gridSize={16} />
 </div>

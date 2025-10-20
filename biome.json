@@ -59,7 +59,9 @@
 						"useConst": "off"
 					},
 					"correctness": {
-						"noUndeclaredVariables": "off"
+						"noUndeclaredVariables": "off",
+						"noUnusedImports": "off",
+						"noUnusedVariables": "off"
 					}
 				}
 			}
