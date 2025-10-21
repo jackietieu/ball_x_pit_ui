@@ -8,7 +8,7 @@ export const starterBalls = [
   'charm',
   'dark',
   'earthquake',
-  'eggSac',
+    'eggSac',
   'freeze',
   'ghost',
   'iron',

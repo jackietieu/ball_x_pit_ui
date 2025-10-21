@@ -38,7 +38,7 @@
       }
     }
   },
-	"javascript": {
+"javascript": {
     "formatter": {
       "quoteStyle": "single",
       "trailingCommas": "none",
