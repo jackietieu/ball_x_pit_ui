@@ -15,37 +15,40 @@
   );
 </script>
 
-<div
-  class="grid gap-0 w-fit p-2"
-  style="grid-template-columns: repeat({gridSize}, minmax(0, 1fr));"
->
-  {#each grid as row}
-    {#each row as cell}
-      {@const xBall = starterBalls[cell.x - 1]}
-      {@const yBall = starterBalls[cell.y - 1]}
-      {@const evolution = evolutions[xBall]?.[yBall]?.evolution}
-      {@const currentBall =
-        cell.x === 0 ? yBall : cell.y === 0 ? xBall : evolution}
-      <GridItem x={cell.x} y={cell.y} ballKey={currentBall}>
-        {#if cell.x === cell.y}
-          <span style="color: var(--yellow); font-size: 2em;">X</span>
-        {:else if cell.x === 0}
-          <GridIcon
-            src={assetMap.ballIcons[yBall]}
-            alt={ballInformation[yBall]?.name + " ball"}
-          />
-        {:else if cell.y === 0}
-          <GridIcon
-            src={assetMap.ballIcons[xBall]}
-            alt={ballInformation[xBall]?.name + " ball"}
-          />
-        {:else if evolution}
-          <GridIcon
-            src={assetMap.ballIcons[evolution]}
-            alt={ballInformation[evolution]?.name + " ball"}
-          />
-        {/if}
-      </GridItem>
+<div class="overflow-x-auto w-full">
+  <div
+    class="grid gap-0 p-2 mx-auto"
+    style="grid-template-columns: repeat({gridSize}, 3.25rem); width: {gridSize *
+      3.25}rem;"
+  >
+    {#each grid as row}
+      {#each row as cell}
+        {@const xBall = starterBalls[cell.x - 1]}
+        {@const yBall = starterBalls[cell.y - 1]}
+        {@const evolution = evolutions[xBall]?.[yBall]?.evolution}
+        {@const currentBall =
+          cell.x === 0 ? yBall : cell.y === 0 ? xBall : evolution}
+        <GridItem x={cell.x} y={cell.y} ballKey={currentBall}>
+          {#if cell.x === cell.y}
+            <span style="color: var(--yellow); font-size: 2em;">X</span>
+          {:else if cell.x === 0}
+            <GridIcon
+              src={assetMap.ballIcons[yBall]}
+              alt={ballInformation[yBall]?.name + " ball"}
+            />
+          {:else if cell.y === 0}
+            <GridIcon
+              src={assetMap.ballIcons[xBall]}
+              alt={ballInformation[xBall]?.name + " ball"}
+            />
+          {:else if evolution}
+            <GridIcon
+              src={assetMap.ballIcons[evolution]}
+              alt={ballInformation[evolution]?.name + " ball"}
+            />
+          {/if}
+        </GridItem>
+      {/each}
     {/each}
-  {/each}
+  </div>
 </div>

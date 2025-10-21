@@ -3,7 +3,6 @@ import type { Balls } from '../types/ballIcons.ts';
 export const advancedEvolutions: [Balls, Balls, Balls][] = [
   ['bomb', 'poison', 'nuclearBomb'],
   ['incubus', 'succubus', 'satan'],
-  ['maggot', 'cell', 'spiderQueen'],
   ['dark', 'sun', 'blackHole']
 ];
 
