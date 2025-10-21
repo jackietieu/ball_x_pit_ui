@@ -3,7 +3,7 @@
   publish = "build"
   
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 
 # Optional: Headers for better performance
 [[headers]]
