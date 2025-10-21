@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ballInformation } from '../../constants/ballInformation.ts';
-import Tooltip from './Tooltip.svelte';
 import type { Balls } from '../../types/balls.ts';
+import Tooltip from './Tooltip.svelte';
 
 const {
   children = null,
@@ -54,6 +54,6 @@ const tooltip = $derived(
   </Tooltip>
 {:else}
   <div class={cellClasses} role="gridcell">
-    {@render children()}
+   {@render children()}
   </div>
 {/if}

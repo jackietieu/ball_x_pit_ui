@@ -1,3 +1,5 @@
+import type { starterItems } from '../constants/starterItems.ts';
+
 export type Items =
   | 'healthPotion'
   | 'manaPotion'

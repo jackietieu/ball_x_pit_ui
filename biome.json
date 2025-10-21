@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -9,11 +9,11 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!**/dist/**",
-      "!**/node_modules/**",
-      "!**/.svelte-kit/**",
-      "!**/build/**",
-      "!**/package/**"
+      "!**/dist",
+      "!**/node_modules",
+      "!**/.svelte-kit",
+      "!**/build",
+      "!**/package"
     ]
   },
   "formatter": {

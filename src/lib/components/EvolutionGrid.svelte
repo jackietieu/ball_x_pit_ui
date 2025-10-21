@@ -1,6 +1,6 @@
 <script lang="ts">
-import { ballInformation } from '../../constants/ballInformation.ts';
 import { evolutions } from '../../constants/ballEvolutions.ts';
+import { ballInformation } from '../../constants/ballInformation.ts';
 import { starterBalls } from '../../constants/starterBalls.ts';
 import assetMap from '../assetMap.ts';
 import GridIcon from './GridIcon.svelte';
