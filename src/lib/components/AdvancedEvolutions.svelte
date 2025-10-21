@@ -28,7 +28,6 @@
   <div class="flex flex-col gap-1 items-center">
     {#each allAdvancedEvolutions as evolution}
       <div class="flex items-center gap-2 p-2 rounded-lg">
-        <!-- Component balls with + signs -->
         {#each evolution.components as component, index}
           <GridItem ballKey={component}>
             <GridIcon
@@ -42,10 +41,8 @@
           {/if}
         {/each}
 
-        <!-- Equals sign -->
         <span class="text-2xl font-bold text-white mx-4">=</span>
 
-        <!-- Result ball -->
         <GridItem ballKey={evolution.result}>
           <GridIcon
             src={assetMap.ballIcons[evolution.result]}

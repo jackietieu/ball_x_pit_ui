@@ -1,8 +1,19 @@
 <script>
-  import { ballInformation } from "../../constants/ballInformation.js";
+  import { ballInformation } from "../../constants/ballInformation.ts";
   import Tooltip from "./Tooltip.svelte";
+  import type { Balls } from "../../types/ballIcons.ts";
 
-  const { children = null, x, y, ballKey = null } = $props();
+  const {
+    children = null,
+    x,
+    y,
+    ballKey = null,
+  }: {
+    children?: any;
+    x: number;
+    y: number;
+    ballKey?: Balls | null;
+  } = $props();
 
   const cellClasses = $derived(
     [
