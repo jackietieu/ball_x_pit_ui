@@ -1,5 +1,5 @@
 <script>
-  const { children, text, delay = 300 } = $props();
+  const { children, tooltip, text, delay = 300 } = $props();
 
   let showTooltip = $state(false);
   let timeoutId = $state(null);
@@ -26,12 +26,16 @@
     {@render children()}
   </div>
 
-  {#if showTooltip && text}
+  {#if showTooltip && (text || tooltip)}
     <div
       role="tooltip"
       class="absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded shadow-lg bottom-full left-1/2 transform -translate-x-1/2 mb-1 w-64 break-words"
     >
-      {text}
+      {#if tooltip}
+        {@render tooltip()}
+      {:else}
+        {text}
+      {/if}
       <div
         class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"
       ></div>
