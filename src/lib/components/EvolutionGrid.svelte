@@ -11,14 +11,27 @@ const { gridSize } = $props();
 const grid = $derived(
   Array.from({ length: gridSize }, (_, y) => Array.from({ length: gridSize }, (_, x) => ({ x, y })))
 );
+
+let scrollContainer: HTMLDivElement;
+
+// Ensure scrolling works properly on mount
+$effect(() => {
+  if (scrollContainer) {
+    // Small initial scroll to "activate" the scroll area
+    scrollContainer.scrollLeft = 1;
+    setTimeout(() => {
+      scrollContainer.scrollLeft = 0;
+    }, 10);
+  }
+});
 </script>
 
-<div class="overflow-x-auto w-full">
-  <div
-    class="grid gap-0 p-2 mx-auto relative"
-    style="grid-template-columns: repeat({gridSize}, 3.25rem); width: {gridSize *
-      3.25}rem; overflow: visible;"
-  >
+<div class="w-full">
+  <div class="overflow-x-auto touch-pan-x" style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;" bind:this={scrollContainer}>
+    <div
+      class="grid gap-0 p-4 relative"
+      style="grid-template-columns: repeat({gridSize}, 3.25rem); width: max-content; overflow: visible; min-width: 100%;"
+    >
     {#each grid as row}
       {#each row as cell}
         {@const xBall = starterBalls[cell.x - 1]}
@@ -48,5 +61,6 @@ const grid = $derived(
         </GridItem>
       {/each}
     {/each}
+    </div>
   </div>
 </div>

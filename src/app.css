@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin '@tailwindcss/typography';
 
 :root {
   --bg-dark: #271217;
@@ -8,4 +7,49 @@
   --yellow: #fdfe1f;
 
   background: var(--bg-dark);
+}
+
+/* Prevent horizontal overflow on body but allow vertical scrolling */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100vw;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Improve touch scrolling on mobile devices */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  /* Ensure touch scrolling works in both directions */
+  touch-action: pan-x;
+  /* Prevent scroll chaining that might interfere with left scrolling */
+  overscroll-behavior-x: contain;
+}
+
+/* Hide scrollbar on mobile while keeping functionality */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 4px;
+  }
 }
