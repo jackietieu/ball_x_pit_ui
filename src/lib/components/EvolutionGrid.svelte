@@ -26,11 +26,11 @@ $effect(() => {
 });
 </script>
 
-<div class="w-full">
+<div class="w-full flex justify-center">
   <div class="overflow-x-auto touch-pan-x" style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;" bind:this={scrollContainer}>
     <div
-      class="grid gap-0 p-4 relative"
-      style="grid-template-columns: repeat({gridSize}, 3.25rem); width: max-content; overflow: visible; min-width: 100%;"
+      class="grid gap-0 p-4 relative mx-auto"
+      style="grid-template-columns: repeat({gridSize}, 3.25rem); width: max-content; overflow: visible;"
     >
     {#each grid as row}
       {#each row as cell}

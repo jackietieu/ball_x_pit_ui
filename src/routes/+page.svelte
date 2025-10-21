@@ -59,7 +59,7 @@ devLog('Page loaded in development mode', { env: env.all });
   </div>
 {/if}
 
-<main class="mt-8 flex flex-col items-center max-w-7xl mx-auto">
+<main class="mt-8 flex flex-col max-w-7xl mx-auto">
   <header class="text-center mb-4 px-4">
     <h1 class="text-3xl font-bold mb-4 text-white">
       BALL x PIT Evolution Chart

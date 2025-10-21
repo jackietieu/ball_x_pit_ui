@@ -22,9 +22,9 @@ const allAdvancedEvolutions = [
     Advanced Evolutions
   </h2>
 
-  <div class="flex flex-col gap-1 items-center">
+  <div class="flex flex-col gap-1">
     {#each allAdvancedEvolutions as evolution}
-      <div class="flex items-center gap-2 p-2 rounded-lg">
+      <div class="flex gap-2 p-2 rounded-lg">
         {#each evolution.components as component, index}
           <GridItem ballKey={component}>
             <GridIcon
