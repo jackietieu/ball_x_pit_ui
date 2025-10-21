@@ -1,24 +1,23 @@
-# Svelte library
+# BALL x PIT Evolution Chart
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+An interactive evolution chart for the video game BALL x PIT, showing ball combinations and their resulting evolutions.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## ⚠️ Asset Notice
 
-## Creating a project
+**Important**: This project uses game assets from BALL x PIT. These assets are NOT owned by this project's creators.
 
-If you're seeing this, you've probably already done this step. Congrats!
+See [ASSETS.md](./ASSETS.md) for full copyright and attribution information.
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Features
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Interactive evolution grid showing starter balls and combinations
+- Advanced evolution formulas with visual representations  
+- Detailed tooltips with ball descriptions
+- Responsive design with hover effects
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've installed dependencies with `npm install`, start a development server:
 
 ```sh
 npm run dev

@@ -1,0 +1,54 @@
+<script>
+  import {
+    advancedEvolutions,
+    multipleAdvancedEvolutions,
+  } from "../../constants/evolutions.js";
+  import assetMap from "../assetMap.js";
+  import GridIcon from "./GridIcon.svelte";
+  import GridItem from "./GridItem.svelte";
+
+  const allAdvancedEvolutions = [
+    ...advancedEvolutions.map((evolution) => ({
+      components: evolution.slice(0, -1),
+      result: evolution[evolution.length - 1],
+    })),
+    ...multipleAdvancedEvolutions.map((evolution) => ({
+      components: evolution.slice(0, -1),
+      result: evolution[evolution.length - 1],
+    })),
+  ];
+</script>
+
+<div class="mt-8 w-full">
+  <h2 class="text-xl font-bold mb-6 text-white text-center">
+    Advanced Evolutions
+  </h2>
+
+  <div class="flex flex-col gap-1 items-center">
+    {#each allAdvancedEvolutions as evolution}
+      <div class="flex items-center gap-2 p-2 rounded-lg">
+        <!-- Component balls with + signs -->
+        {#each evolution.components as component, index}
+          <GridItem ballKey={component}>
+            <GridIcon src={assetMap.ballIcons[component]} alt={component} />
+          </GridItem>
+
+          {#if index < evolution.components.length - 1}
+            <span class="text-2xl font-bold text-white mx-2">+</span>
+          {/if}
+        {/each}
+
+        <!-- Equals sign -->
+        <span class="text-2xl font-bold text-white mx-4">=</span>
+
+        <!-- Result ball -->
+        <GridItem ballKey={evolution.result}>
+          <GridIcon
+            src={assetMap.ballIcons[evolution.result]}
+            alt={evolution.result}
+          />
+        </GridItem>
+      </div>
+    {/each}
+  </div>
+</div>

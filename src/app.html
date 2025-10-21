@@ -4,6 +4,32 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- Default meta tags (will be overridden by page-specific ones) -->
+		<meta name="description" content="Interactive BALL x PIT evolution chart showing all ball combinations and advanced evolutions" />
+		<meta name="keywords" content="BALL x PIT, ball evolution, game guide, evolution chart" />
+		
+		<!-- Structured Data for SEO -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebApplication",
+			"name": "BALL x PIT Evolution Chart",
+			"description": "Interactive evolution chart for BALL x PIT showing all ball combinations and advanced evolutions",
+			"applicationCategory": "GameApplication",
+			"operatingSystem": "Web Browser",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"about": {
+				"@type": "VideoGame",
+				"name": "BALL x PIT"
+			}
+		}
+		</script>
+		
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
