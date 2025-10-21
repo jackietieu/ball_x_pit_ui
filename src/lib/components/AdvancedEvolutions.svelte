@@ -1,4 +1,5 @@
 <script>
+  import { ballInformation } from "../../constants/ballInformation.ts";
   import {
     advancedEvolutions,
     multipleAdvancedEvolutions,
@@ -30,7 +31,10 @@
         <!-- Component balls with + signs -->
         {#each evolution.components as component, index}
           <GridItem ballKey={component}>
-            <GridIcon src={assetMap.ballIcons[component]} alt={component} />
+            <GridIcon
+              src={assetMap.ballIcons[component]}
+              alt={ballInformation[component]?.name + " ball"}
+            />
           </GridItem>
 
           {#if index < evolution.components.length - 1}
@@ -45,7 +49,7 @@
         <GridItem ballKey={evolution.result}>
           <GridIcon
             src={assetMap.ballIcons[evolution.result]}
-            alt={evolution.result}
+            alt={ballInformation[evolution.result]?.name + " ball"}
           />
         </GridItem>
       </div>

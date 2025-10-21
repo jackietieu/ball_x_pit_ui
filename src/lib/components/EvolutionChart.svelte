@@ -1,4 +1,5 @@
 <script>
+  import { ballInformation } from "../../constants/ballInformation.ts";
   import { evolutions } from "../../constants/evolutions.ts";
   import { starterBalls } from "../../constants/starterBalls.ts";
   import assetMap from "../assetMap.ts";
@@ -28,17 +29,17 @@
         {:else if cell.x === 0}
           <GridIcon
             src={assetMap.ballIcons[yBall]}
-            alt={`${cell.x}, ${cell.y}`}
+            alt={ballInformation[yBall]?.name + " ball"}
           />
         {:else if cell.y === 0}
           <GridIcon
             src={assetMap.ballIcons[xBall]}
-            alt={`${cell.x}, ${cell.y}`}
+            alt={ballInformation[xBall]?.name + " ball"}
           />
         {:else if evolution}
           <GridIcon
             src={assetMap.ballIcons[evolution]}
-            alt={`${cell.x}, ${cell.y}`}
+            alt={ballInformation[evolution]?.name + " ball"}
           />
         {/if}
       </GridItem>
