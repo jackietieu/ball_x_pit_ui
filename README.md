@@ -1,6 +1,6 @@
 # BALL x PIT Evolution Chart
 
-An interactive evolution chart for the video game BALL x PIT, showing ball combinations and their resulting evolutions.
+An interactive evolution chart for the video game BALL x PIT, showing details about balls and passives and their resulting evolutions.
 
 ## ⚠️ Asset Notice
 
@@ -10,10 +10,10 @@ See [ASSETS.md](./ASSETS.md) for full copyright and attribution information.
 
 ## Features
 
-- Interactive evolution grid showing starter balls and combinations
+- Interactive evolution grid showing starter balls and passives and evolutions
 - Advanced evolution formulas with visual representations
 - Detailed tooltips with ball descriptions
-- Responsive design with hover effects
+- Responsive design
 
 ## Developing
 
