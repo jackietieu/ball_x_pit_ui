@@ -1,8 +1,8 @@
 <script lang="ts">
   import { ballInformation } from '../../constants/ballInformation.ts';
-  import { itemInformation } from '../../constants/itemInformation.ts';
+  import { passiveInformation } from '../../constants/passiveInformation.ts';
   import type { Balls } from '../../types/balls.ts';
-  import type { Items } from '../../types/items.ts';
+  import type { Passives } from '../../types/passives.ts';
   import Tooltip from './Tooltip.svelte';
 
   const {
@@ -10,13 +10,13 @@
     x,
     y,
     ballKey = null,
-    itemKey = null,
+    passiveKey = null,
   }: {
     children?: any;
     x: number;
     y: number;
     ballKey?: Balls | null;
-    itemKey?: Items | null;
+    passiveKey?: Passives | null;
   } = $props();
 
   const cellClasses = $derived(
@@ -56,17 +56,17 @@
       </div>
     {/snippet}
   </Tooltip>
-{:else if itemKey && itemInformation[itemKey]}
+{:else if passiveKey && passiveInformation[passiveKey]}
   <Tooltip delay={100}>
     <div class={cellClasses} role="gridcell">
       {@render children()}
     </div>
     {#snippet tooltip()}
       <div class="font-bold text-yellow-400 mb-1">
-        {itemInformation[itemKey].name}
+        {passiveInformation[passiveKey].name}
       </div>
       <div class="text-sm">
-        {itemInformation[itemKey].description}
+        {passiveInformation[passiveKey].description}
       </div>
     {/snippet}
   </Tooltip>

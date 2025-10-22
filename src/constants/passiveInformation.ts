@@ -1,15 +1,15 @@
 import assetMap from '$lib/assetMap.ts';
 import type { Balls } from '../types/balls.ts';
-import type { Items } from '../types/items.ts';
+import type { Passives } from '../types/passives.ts';
 
 export const allBalls = Object.keys(assetMap.ballIcons) as Balls[];
 
-export type ItemInfo = {
+export type PassiveInfo = {
   name: string;
   description?: string;
 };
 
-export const itemInformation: Record<Items, ItemInfo> = {
+export const passiveInformation: Record<Passives, PassiveInfo> = {
   babyRattle: {
     name: 'Baby Rattle',
     description: '',

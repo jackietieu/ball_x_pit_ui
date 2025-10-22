@@ -183,7 +183,7 @@ export const assetMap = {
       ? '/assets/ball_pit_lightning_rod.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954373/ball_x_pit/ball_icons/ball_pit_lightning_rod.png',
   },
-  itemIcons: {
+  passiveIcons: {
     warHorn: dev
       ? '/assets/warHorn.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1761105455/ball_x_pit/ball_icons/warHorn.png',

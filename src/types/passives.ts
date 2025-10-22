@@ -1,6 +1,6 @@
-import type { starterItems } from '../constants/starterItems.ts';
+import type { starterPassives } from '../constants/starterPassives.ts';
 
-export type Items =
+export type Passives =
   | 'babyRattle'
   | 'breastplate'
   | 'reachersSpear'
@@ -30,5 +30,5 @@ export type Items =
   | 'wretchedOnion'
   | 'ghostlyCorset';
 
-export type StarterItems = (typeof starterItems)[number];
-// export type EvolutionItems = Exclude<Items, StarterItems>;
+export type StarterPassives = (typeof starterPassives)[number];
+// export type EvolutionPassives = Exclude<Passives, StarterPassives>;

@@ -1,6 +1,6 @@
-import type { Items } from '../types/items.ts';
+import type { Passives } from '../types/passives.ts';
 
-export const starterItems = [
+export const starterPassives = [
   'babyRattle',
   'breastplate',
   'reachersSpear',
@@ -21,4 +21,4 @@ export const starterItems = [
   'sapphireHiltedDagger',
   'wretchedOnion',
   'ghostlyCorset',
-] as const satisfies Items[];
+] as const satisfies Passives[];
