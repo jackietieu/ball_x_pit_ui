@@ -31,4 +31,3 @@ export type Passives =
   | 'ghostlyCorset';
 
 export type StarterPassives = (typeof starterPassives)[number];
-// export type EvolutionPassives = Exclude<Passives, StarterPassives>;
