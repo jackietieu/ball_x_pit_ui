@@ -80,35 +80,38 @@ export const itemInformation: Record<Items, ItemInfo> = {
   },
   deadeyesCross: {
     name: "Deadeye's Cross",
-    description: '',
+    description: 'Increase critical hit chance to 60%',
   },
   cornucopia: {
     name: 'Cornucopia',
-    description: '',
+    description: 'Each time baby balls are created, spawn 0-1 additional baby balls.',
   },
   odiferousShell: {
     name: 'Odiferous Shell',
-    description: '',
+    description: 'When you touch enemies, they have a 50% chance of instantly dying',
   },
   graciousImpaler: {
     name: 'Gracious Impaler',
-    description: '',
+    description: 'Critical hits have a 5% chance to instantly kill enemies',
   },
   phantomRegalia: {
     name: 'Phantom Regalia',
-    description: '',
+    description:
+      'Balls go through enemies until they hit the back wall. Balls deal 50% more damage when going through enemies',
   },
   soulReaver: {
     name: 'Soul Reaver',
-    description: '',
+    description:
+      'Each kill heals you by 1 and you can heal past your max health at 30% efficiency.',
   },
   tormentorsMask: {
     name: "Tormentor's Mask",
-    description: '',
+    description: 'Enemies have a 10% chance of dying immediately the first time they detect you',
   },
   wingsOfTheAnointed: {
     name: 'Wings Of The Anointed',
-    description: '',
+    description:
+      'Balls move 40% faster and you move 20% faster. You no longer are affected by environmental hazards on the ground.',
   },
   ghostlyCorset: {
     name: 'Ghostly Corset',
