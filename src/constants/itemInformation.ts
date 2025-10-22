@@ -42,8 +42,8 @@ export const itemInformation: Record<Items, ItemInfo> = {
     name: 'War Horn',
     description: '',
   },
-  corruptedOnion: {
-    name: 'Corrupted Onion',
+  wretchedOnion: {
+    name: 'Wretched Onion',
     description: '',
   },
   deadeyesAmulet: {
@@ -108,10 +108,6 @@ export const itemInformation: Record<Items, ItemInfo> = {
   },
   wingsOfTheAnointed: {
     name: 'Wings Of The Anointed',
-    description: '',
-  },
-  wretchedOnion: {
-    name: 'Wretched Onion',
     description: '',
   },
   ghostlyCorset: {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ballInformation } from '../../constants/ballInformation.ts';
+  import { itemInformation } from '../../constants/itemInformation.ts';
   import type { Balls } from '../../types/balls.ts';
   import type { Items } from '../../types/items.ts';
   import Tooltip from './Tooltip.svelte';
@@ -9,6 +10,7 @@
     x,
     y,
     ballKey = null,
+    itemKey = null,
   }: {
     children?: any;
     x: number;
@@ -54,7 +56,21 @@
       </div>
     {/snippet}
   </Tooltip>
-{:else if itemKey && ballInformation[itemKey]}{:else}
+{:else if itemKey && itemInformation[itemKey]}
+  <Tooltip delay={100}>
+    <div class={cellClasses} role="gridcell">
+      {@render children()}
+    </div>
+    {#snippet tooltip()}
+      <div class="font-bold text-yellow-400 mb-1">
+        {itemInformation[itemKey].name}
+      </div>
+      <div class="text-sm">
+        {itemInformation[itemKey].description}
+      </div>
+    {/snippet}
+  </Tooltip>
+{:else}
   <div class={cellClasses} role="gridcell">
     {@render children()}
   </div>

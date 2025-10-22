@@ -9,7 +9,7 @@ export type Items =
   | 'crownOfThorns'
   | 'fleetFeet'
   | 'warHorn'
-  | 'corruptedOnion'
+  | 'wretchedOnion'
   | 'deadeyesAmulet'
   | 'ghostlyCorset'
   | 'vampiricSword'

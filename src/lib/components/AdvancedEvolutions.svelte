@@ -62,7 +62,7 @@
     {/each}
   </div>
 
-  <!-- Item Evolutions Section -->
+  <!-- Passive Evolutions Section -->
   <h2 class="text-xl font-bold mb-6 mt-8 text-white text-center">Passive Evolutions</h2>
 
   <div class="flex flex-col gap-1 items-center">
@@ -73,7 +73,7 @@
           style="min-width: max-content;"
         >
           {#each evolution.components as component, index}
-            <GridItem ballKey={component} x={0} y={0}>
+            <GridItem itemKey={component} x={0} y={0}>
               <GridIcon src={assetMap.itemIcons[component]} alt={component + ' item'} />
             </GridItem>
 
@@ -84,7 +84,7 @@
 
           <span class="text-2xl font-bold text-white mx-4">=</span>
 
-          <GridItem ballKey={evolution.result} x={0} y={0}>
+          <GridItem itemKey={evolution.result} x={0} y={0}>
             <GridIcon src={assetMap.itemIcons[evolution.result]} alt={evolution.result + ' item'} />
           </GridItem>
         </div>

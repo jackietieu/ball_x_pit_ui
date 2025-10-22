@@ -9,7 +9,7 @@ export const starterItems = [
   'crownOfThorns',
   'fleetFeet',
   'warHorn',
-  'corruptedOnion',
+  'wretchedOnion',
   'deadeyesAmulet',
   'ghostlyCorset',
   'vampiricSword',
