@@ -27,5 +27,3 @@ vite.config.ts.timestamp-*
 
 # Deno (no longer used)
 deno.lock
-
-/static/assets
