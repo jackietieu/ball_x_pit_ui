@@ -45,7 +45,7 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
   ['earthquake', 'wind', 'sandstorm'],
   ['eggSac', 'iron', 'shotgun'],
   ['eggSac', 'vampire', 'mosquitoSwarm'],
-  ['freeze', 'ghost', 'wrath'],
+  ['freeze', 'ghost', 'wraith'],
   ['freeze', 'laserHorizontal', 'freezeRay'],
   ['freeze', 'laserVertical', 'freezeRay'],
   ['freeze', 'lightning', 'blizzard'],
