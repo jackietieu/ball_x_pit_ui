@@ -206,7 +206,7 @@ export const ballInformation: Record<Balls, BallInfo> = {
     description:
       'Explodes into 2-3 egg sacs on hitting an enemy. Has a 3 second cooldown before it can be shot again.',
   },
-  wrath: {
+  wraith: {
     name: 'Wraith',
     description: 'Freezes any enemy it passes through for 0.8 seconds.',
   },
