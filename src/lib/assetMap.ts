@@ -67,7 +67,7 @@ export const assetMap = {
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954340/ball_x_pit/ball_icons/ball_icon_freeze.png',
     freezeRay: dev
       ? '/src/lib/assets/ball_icon_freeze_ray.png'
-      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954340/ball_x_pit/ball_icons/ball_icon_freeze.png',
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954340/ball_x_pit/ball_icons/ball_icon_freeze_ray.png',
     frozenFlame: dev
       ? '/src/lib/assets/ball_icon_frozen_flame.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954341/ball_x_pit/ball_icons/ball_icon_frozen_flame.png',
