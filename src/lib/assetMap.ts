@@ -41,9 +41,9 @@ export const assetMap = {
     shotgun: dev
       ? '/src/lib/assets/ball_icon_shotgun.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954363/ball_x_pit/ball_icons/ball_icon_shotgun.png',
-    wrath: dev
-      ? '/src/lib/assets/ball_icon_wrath.png'
-      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954372/ball_x_pit/ball_icons/ball_icon_wrath.png',
+    wraith: dev
+      ? '/src/lib/assets/ball_icon_wraith.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954372/ball_x_pit/ball_icons/ball_icon_wraith.png',
     dark: dev
       ? '/src/lib/assets/ball_icon_dark.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954337/ball_x_pit/ball_icons/ball_icon_dark.png',
