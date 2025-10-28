@@ -40,7 +40,7 @@
   <!-- Additional SEO -->
   <meta name="robots" content="index, follow" />
   <meta name="author" content="BALL x PIT Evolution Chart" />
-  <link rel="canonical" href="https://your-domain.com" />
+  <link rel="canonical" href="https://ballxpit.netlify.app/" />
 </svelte:head>
 
 {#if env.isDev && env.isDebug}
