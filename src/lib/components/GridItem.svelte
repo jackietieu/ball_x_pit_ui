@@ -52,9 +52,13 @@
         {ballInformation[ballKey].name}
       </div>
       {#if ballInformation[ballKey].evolution}
-      <div>
-        {ballInformation[ballKey].evolution}
-      </div>
+        <div>
+          {#each ballInformation[ballKey].evolution.split('/') as evolutionText}
+            <div class="text-gray-400 mb-1">
+              {evolutionText.trim()}
+            </div>
+          {/each}
+        </div>
       {/if}
       <div class="text-sm">
         {ballInformation[ballKey].description}
