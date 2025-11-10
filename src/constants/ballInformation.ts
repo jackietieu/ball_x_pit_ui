@@ -6,6 +6,7 @@ export const allBalls = Object.keys(assetMap.ballIcons) as Balls[];
 export type BallInfo = {
   name: string;
   description: string;
+  evolution?: string;
   // TODO: Character that starts with this ball
   starterCharacter?: string;
 };

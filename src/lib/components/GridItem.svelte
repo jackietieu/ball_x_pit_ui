@@ -51,6 +51,11 @@
       <div class="font-bold text-yellow-400 mb-1">
         {ballInformation[ballKey].name}
       </div>
+      {#if ballInformation[ballKey].evolution}
+      <div>
+        {ballInformation[ballKey].evolution}
+      </div>
+      {/if}
       <div class="text-sm">
         {ballInformation[ballKey].description}
       </div>
