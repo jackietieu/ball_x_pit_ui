@@ -1,4 +1,5 @@
 import type { Balls, StarterBalls } from '../types/balls.ts';
+import { ballInformation } from './ballInformation.ts';
 
 export const advancedEvolutions: [Balls, Balls, Balls][] = [
   ['bomb', 'poison', 'nuclearBomb'],
@@ -63,6 +64,15 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
   ['lightning', 'wind', 'storm'],
   ['poison', 'wind', 'noxious'],
 ];
+
+export function getEvolutionRecipe(ball: Balls): string | null {
+  const matches = basicEvolutions
+    .filter(([, , result]) => result === ball)
+    .map(([a, b]) => `${ballInformation[a].name} x ${ballInformation[b].name}`);
+
+  if (matches.length === 0) return null;
+  return matches.join(' / ');
+}
 
 function buildEvolutionMap() {
   const evolutionMap: Partial<Record<Balls, Partial<Record<Balls, Record<'evolution', Balls>>>>> =
