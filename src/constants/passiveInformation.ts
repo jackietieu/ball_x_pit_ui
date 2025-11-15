@@ -12,71 +12,71 @@ export type PassiveInfo = {
 export const passiveInformation: Record<Passives, PassiveInfo> = {
   babyRattle: {
     name: 'Baby Rattle',
-    description: '',
+    description: 'Gain 1.5x baby balls, but your aim becomes scattered.',
   },
   breastplate: {
     name: 'Breastplate',
-    description: '',
+    description: 'Decrease damage taken by 10%',
   },
   reachersSpear: {
     name: "Reacher's Spear",
-    description: '',
+    description: 'Increase crit chance to 20% when hitting enemies in the same column as you. Balls start off at 70% speed but increase by 20% each bounce (max 200%).',
   },
   etherealCloak: {
     name: 'Ethereal Cloak',
-    description: '',
+    description: 'Balls go through enemies and deal 25% bonus damage until they hit the back of the field',
   },
   everflowingGoblet: {
     name: 'Everflowing Goblet',
-    description: '',
+    description: 'You can heal past your max health at 20% efficiency.',
   },
   crownOfThorns: {
     name: 'Crown Of Thorns',
-    description: '',
+    description: 'Destroy the 2 nearest enemies when you are hit from close range',
   },
   fleetFeet: {
     name: 'Fleet Feet',
-    description: '',
+    description: 'Increase movement speed by 10% and move at full speed while shooting.',
   },
   warHorn: {
     name: 'War Horn',
-    description: '',
+    description: 'All baby balls deal 20% more damage',
   },
   wretchedOnion: {
     name: 'Wretched Onion',
-    description: '',
+    description: 'Deals 6-12 per second to enemies within 2 tiles.',
   },
   deadeyesAmulet: {
     name: "Deadeye's Amulet",
-    description: '',
+    description: 'Critical hits deal 10-15 bonus damage.',
   },
   vampiricSword: {
     name: 'Vampiric Sword',
-    description: '',
+    description: 'Each kill heals you by 5. but each shot you take deals 2 damage to you.',
   },
   spikedCollar: {
     name: 'Spiked Collar',
-    description: '',
+    description: 'Deal 30-50 to enemies the first time you get into their melee attack range.',
   },
   radiantFeather: {
     name: 'Radiant Feather',
-    description: '',
+    description: 'Increase ball launch speed by 20%, but get knocked back a little each time you shoot a ball',
   },
   diamondHiltedDagger: {
     name: 'Diamond Hilted Dagger',
-    description: '',
+    description: 'Increase crit chance to 20% when hitting enemies in the front.',
   },
   emeraldHiltedDagger: {
     name: 'Emerald Hilted Dagger',
-    description: '',
+    description: 'Increase crit chance to 30% when hitting enemies on their right side.',
   },
   rubyHiltedDagger: {
     name: 'Ruby Hilted Dagger',
-    description: '',
+    description: 'Increase crit chance to 15% when hitting enemies in the back.',
   },
   sapphireHiltedDagger: {
     name: 'Sapphire Hilted Dagger',
-    description: '',
+    description: 'Increase crit chance to 30% when hitting enemies on their left side.',
   },
   deadeyesCross: {
     name: "Deadeye's Cross",
@@ -115,6 +115,6 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
   },
   ghostlyCorset: {
     name: 'Ghostly Corset',
-    description: '',
+    description: 'Balls go through enemies and deal 20% bonus damage when hitting them from the side.',
   },
 };
