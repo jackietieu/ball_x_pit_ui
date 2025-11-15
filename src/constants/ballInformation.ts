@@ -28,7 +28,8 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   blizzard: {
     name: 'Blizzard',
-    description: 'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
+    description:
+      'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
   },
   bomb: {
     name: 'Bomb',
@@ -174,7 +175,8 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   storm: {
     name: 'Storm',
-    description: 'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
+    description:
+      'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
   },
   succubus: {
     name: 'Succubus',
@@ -222,7 +224,8 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   broodMother: {
     name: 'Brood Mother',
-    description: 'Has a 25 percent chance of birthing a baby ball each time it hits an enemy.',
+    description:
+      'Has a 25 percent chance of birthing a baby ball each time it hits an enemy.',
   },
   burn: {
     name: 'Burn',

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ballInformation } from '../../constants/ballInformation.ts';
+  import { getEvolutionRecipes } from '../../constants/ballEvolutions.ts';
   import { passiveInformation } from '../../constants/passiveInformation.ts';
   import type { Balls } from '../../types/balls.ts';
   import type { Passives } from '../../types/passives.ts';
@@ -51,6 +52,15 @@
       <div class="font-bold text-yellow-400 mb-1">
         {ballInformation[ballKey].name}
       </div>
+      {#if getEvolutionRecipes(ballKey)}
+        <div>
+          {#each getEvolutionRecipes(ballKey)?.split('/') as evolutionText}
+            <div class="text-gray-400 mb-1">
+              {evolutionText.trim()}
+            </div>
+          {/each}
+        </div>
+      {/if}
       <div class="text-sm">
         {ballInformation[ballKey].description}
       </div>

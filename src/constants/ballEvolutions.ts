@@ -1,4 +1,5 @@
 import type { Balls, StarterBalls } from '../types/balls.ts';
+import { ballInformation } from './ballInformation.ts';
 
 export const advancedEvolutions: [Balls, Balls, Balls][] = [
   ['bomb', 'poison', 'nuclearBomb'],
@@ -63,6 +64,39 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
   ['lightning', 'wind', 'storm'],
   ['poison', 'wind', 'noxious'],
 ];
+
+export function getEvolutionRecipes(ball: Balls): string | null {
+  let matches = basicEvolutions
+    .filter(([, , result]) => result === ball)
+    .map(([a, b]) => `${ballInformation[a].name} x ${ballInformation[b].name}`);
+
+  if (matches.length === 0) return null;
+
+  // Condense Laser (Horizontal) and Laser (Vertical) recipes into Laser (Either)
+  const isLaser = (s: string) =>
+    /Laser\s*\((Horizontal|Vertical)\)/i.test(s);
+
+  const normalizeLaser = (s: string) =>
+    s.replace(/Laser\s*\((Horizontal|Vertical)\)/gi, "Laser (Either)");
+
+  const condensed: string[] = [];
+
+  for (const m of matches) {
+    const [left, right] = m.split(" x ");
+
+    if (isLaser(left) && isLaser(right)) {
+      condensed.push(m);
+      continue;
+    }
+
+    const normLeft = isLaser(left) ? normalizeLaser(left) : left;
+    const normRight = isLaser(right) ? normalizeLaser(right) : right;
+
+    condensed.push(`${normLeft} x ${normRight}`);
+  }
+
+  return [...new Set(condensed)].join(" / ");
+}
 
 function buildEvolutionMap() {
   const evolutionMap: Partial<Record<Balls, Partial<Record<Balls, Record<'evolution', Balls>>>>> =
