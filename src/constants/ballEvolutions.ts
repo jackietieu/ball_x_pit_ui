@@ -66,9 +66,9 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
 ];
 
 export function getEvolutionRecipes(ball: Balls): string | null {
-  let matches = basicEvolutions
+  const matches = basicEvolutions
     .filter(([, , result]) => result === ball)
-    .map(([a, b]) => `${ballInformation[a].name} x ${ballInformation[b].name}`);
+    .map(([ball1, ball2]) => `${ballInformation[ball1].name} x ${ballInformation[ball2].name}`);
 
   if (matches.length === 0) return null;
 
@@ -81,18 +81,18 @@ export function getEvolutionRecipes(ball: Balls): string | null {
 
   const condensed: string[] = [];
 
-  for (const m of matches) {
-    const [left, right] = m.split(" x ");
+  for (const match of matches) {
+    const [leftBall, rightBall] = match.split(" x ");
 
-    if (isLaser(left) && isLaser(right)) {
-      condensed.push(m);
+    if (isLaser(leftBall) && isLaser(rightBall)) {
+      condensed.push(match);
       continue;
     }
 
-    const normLeft = isLaser(left) ? normalizeLaser(left) : left;
-    const normRight = isLaser(right) ? normalizeLaser(right) : right;
+    const normLeftBall = isLaser(leftBall) ? normalizeLaser(leftBall) : leftBall;
+    const normRightBall = isLaser(rightBall) ? normalizeLaser(rightBall) : rightBall;
 
-    condensed.push(`${normLeft} x ${normRight}`);
+    condensed.push(`${normLeftBall} x ${normRightBall}`);
   }
 
   return [...new Set(condensed)].join(" / ");
