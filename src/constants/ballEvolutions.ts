@@ -5,6 +5,8 @@ export const advancedEvolutions: [Balls, Balls, Balls][] = [
   ['bomb', 'poison', 'nuclearBomb'],
   ['incubus', 'succubus', 'satan'],
   ['dark', 'sun', 'blackHole'],
+  ['laserHorizontal', 'steel', 'laserCutter'],
+  ['laserVertical', 'steel', 'laserCutter'],
 ];
 
 export const multipleAdvancedEvolutions: [Balls, Balls, Balls, Balls][] = [
@@ -23,9 +25,13 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
   ['broodMother', 'vampire', 'mosquitoKing'],
   ['burn', 'charm', 'berserk'],
   ['burn', 'earthquake', 'magma'],
+  ['burn', 'dark', 'banishedFlame'],
+  ['burn', 'eggSac', 'fireworks'],
   ['burn', 'freeze', 'frozenFlame'],
   ['burn', 'iron', 'bomb'],
   ['burn', 'light', 'sun'],
+  ['burn', 'poison', 'brimstone'],
+  ['burn', 'stone', 'brimstone'],
   ['burn', 'wind', 'inferno'],
   ['cell', 'earthquake', 'overgrowth'],
   ['cell', 'eggSac', 'voluptuousEggSac'],
@@ -63,26 +69,30 @@ export const basicEvolutions: [StarterBalls, StarterBalls, Balls][] = [
   ['light', 'lightning', 'flash'],
   ['lightning', 'wind', 'storm'],
   ['poison', 'wind', 'noxious'],
+  ['stone', 'earthquake', 'landslide'],
+  ['stone', 'eggSac', 'catapult'],
+  ['stone', 'freeze', 'glacier'],
+  ['stone', 'iron', 'steel'],
+  ['stone', 'wind', 'sandstorm'],
 ];
 
 export function getEvolutionRecipes(ball: Balls): string | null {
-  const matches = basicEvolutions
+  const matches = [...basicEvolutions, ...advancedEvolutions]
     .filter(([, , result]) => result === ball)
     .map(([ball1, ball2]) => `${ballInformation[ball1].name} x ${ballInformation[ball2].name}`);
 
   if (matches.length === 0) return null;
 
   // Condense Laser (Horizontal) and Laser (Vertical) recipes into Laser (Either)
-  const isLaser = (s: string) =>
-    /Laser\s*\((Horizontal|Vertical)\)/i.test(s);
+  const isLaser = (s: string) => /Laser\s*\((Horizontal|Vertical)\)/i.test(s);
 
   const normalizeLaser = (s: string) =>
-    s.replace(/Laser\s*\((Horizontal|Vertical)\)/gi, "Laser (Either)");
+    s.replace(/Laser\s*\((Horizontal|Vertical)\)/gi, 'Laser (Either)');
 
   const condensed: string[] = [];
 
   for (const match of matches) {
-    const [leftBall, rightBall] = match.split(" x ");
+    const [leftBall, rightBall] = match.split(' x ');
 
     if (isLaser(leftBall) && isLaser(rightBall)) {
       condensed.push(match);
@@ -95,7 +105,7 @@ export function getEvolutionRecipes(ball: Balls): string | null {
     condensed.push(`${normLeftBall} x ${normRightBall}`);
   }
 
-  return [...new Set(condensed)].join(" / ");
+  return [...new Set(condensed)].join(' / ');
 }
 
 function buildEvolutionMap() {

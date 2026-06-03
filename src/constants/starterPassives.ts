@@ -19,6 +19,8 @@ export const starterPassives = [
   'emeraldHiltedDagger',
   'rubyHiltedDagger',
   'sapphireHiltedDagger',
+  'turret',
+  'handFan',
   'wretchedOnion',
   'ghostlyCorset',
 ] as const satisfies Passives[];

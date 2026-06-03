@@ -182,6 +182,30 @@ export const assetMap = {
     lightningRod: dev
       ? '/src/lib/assets/ball_pit_lightning_rod.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1760954373/ball_x_pit/ball_icons/ball_pit_lightning_rod.png',
+    stone: dev
+      ? '/src/lib/assets/ball_icon_stone_ball.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_stone_ball.png',
+    landslide: dev
+      ? '/src/lib/assets/ball_icon_landslide.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_landslide.png',
+    steel: dev
+      ? '/src/lib/assets/ball_icon_steel.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_steel.png',
+    catapult: dev
+      ? '/src/lib/assets/ball_icon_catapult.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_catapult.png',
+    brimstone: dev
+      ? '/src/lib/assets/ball_icon_brimstone.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_brimstone.png',
+    banishedFlame: dev
+      ? '/src/lib/assets/ball_icon_banished_flame.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_banished_flame.png',
+    fireworks: dev
+      ? '/src/lib/assets/ball_icon_fireworks.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_fireworks.png',
+    laserCutter: dev
+      ? '/src/lib/assets/ball_icon_laser_cutter.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/ball_icon_laser_cutter.png',
   },
   passiveIcons: {
     warHorn: dev
@@ -262,6 +286,18 @@ export const assetMap = {
     deadeyesCross: dev
       ? '/src/lib/assets/deadeyesCross.png'
       : 'https://res.cloudinary.com/dnmknegr2/image/upload/v1761105451/ball_x_pit/ball_icons/deadeyesCross.png',
+    turret: dev
+      ? '/src/lib/assets/turret.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/turret.png',
+    handFan: dev
+      ? '/src/lib/assets/handFan.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/handFan.png',
+    deadeyesImpaler: dev
+      ? '/src/lib/assets/deadeyesImpaler.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/deadeyesImpaler.png',
+    grotesqueArtillery: dev
+      ? '/src/lib/assets/grotesqueArtillery.png'
+      : 'https://res.cloudinary.com/dnmknegr2/image/upload/v0000000000/ball_x_pit/ball_icons/grotesqueArtillery.png',
   },
 };
 

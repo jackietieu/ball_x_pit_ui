@@ -8,6 +8,7 @@ export const passiveEvolutions: [StarterPassives, StarterPassives, Passives][] =
   ['everflowingGoblet', 'vampiricSword', 'soulReaver'],
   ['crownOfThorns', 'spikedCollar', 'tormentorsMask'],
   ['fleetFeet', 'radiantFeather', 'wingsOfTheAnointed'],
+  ['turret', 'handFan', 'grotesqueArtillery'],
 ] as const;
 
 export const advancedPassiveEvolutions = [
@@ -18,6 +19,7 @@ export const advancedPassiveEvolutions = [
     'sapphireHiltedDagger' satisfies StarterPassives,
     'deadeyesCross',
   ],
+  ['graciousImpaler', 'deadeyesCross', 'deadeyesImpaler'],
 ] as const satisfies Passives[][];
 
 export const allPassiveEvolutions = [...passiveEvolutions, ...advancedPassiveEvolutions];

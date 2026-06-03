@@ -20,11 +20,13 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
   },
   reachersSpear: {
     name: "Reacher's Spear",
-    description: 'Increase crit chance to 20% when hitting enemies in the same column as you. Balls start off at 70% speed but increase by 20% each bounce (max 200%).',
+    description:
+      'Increase crit chance to 20% when hitting enemies in the same column as you. Balls start off at 70% speed but increase by 20% each bounce (max 200%).',
   },
   etherealCloak: {
     name: 'Ethereal Cloak',
-    description: 'Balls go through enemies and deal 25% bonus damage until they hit the back of the field',
+    description:
+      'Balls go through enemies and deal 25% bonus damage until they hit the back of the field',
   },
   everflowingGoblet: {
     name: 'Everflowing Goblet',
@@ -60,7 +62,8 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
   },
   radiantFeather: {
     name: 'Radiant Feather',
-    description: 'Increase ball launch speed by 20%, but get knocked back a little each time you shoot a ball',
+    description:
+      'Increase ball launch speed by 20%, but get knocked back a little each time you shoot a ball',
   },
   diamondHiltedDagger: {
     name: 'Diamond Hilted Dagger',
@@ -82,6 +85,15 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
     name: "Deadeye's Cross",
     description: 'Increase critical hit chance to 60%',
   },
+  turret: {
+    name: 'Turret',
+    description:
+      'Floats around your character and shoots a baby ball at enemies every 2.0 seconds.',
+  },
+  handFan: {
+    name: 'Hand Fan',
+    description: 'Slow down enemies in the same column as you by 50%.',
+  },
   cornucopia: {
     name: 'Cornucopia',
     description: 'Each time baby balls are created, spawn 0-1 additional baby balls.',
@@ -93,6 +105,16 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
   graciousImpaler: {
     name: 'Gracious Impaler',
     description: 'Critical hits have a 5% chance to instantly kill enemies',
+  },
+  deadeyesImpaler: {
+    name: "Deadeye's Impaler",
+    description:
+      'Increase critical hit chance to 5%. Critical hits instantly kill non-boss enemies.',
+  },
+  grotesqueArtillery: {
+    name: 'Grotesque Artillery',
+    description:
+      'Floats around your character and shoots a random level 1 unevolved special ball at enemies every 8.0 seconds.',
   },
   phantomRegalia: {
     name: 'Phantom Regalia',
@@ -115,6 +137,7 @@ export const passiveInformation: Record<Passives, PassiveInfo> = {
   },
   ghostlyCorset: {
     name: 'Ghostly Corset',
-    description: 'Balls go through enemies and deal 20% bonus damage when hitting them from the side.',
+    description:
+      'Balls go through enemies and deal 20% bonus damage when hitting them from the side.',
   },
 };

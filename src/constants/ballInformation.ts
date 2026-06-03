@@ -28,8 +28,7 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   blizzard: {
     name: 'Blizzard',
-    description:
-      'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
+    description: 'Freezes all enemies within a 2 tile radius for 0.8 seconds, dealing 1-50 damage.',
   },
   bomb: {
     name: 'Bomb',
@@ -175,8 +174,12 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   storm: {
     name: 'Storm',
+    description: 'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
+  },
+  stone: {
+    name: 'Stone',
     description:
-      'Emits lightning to strike nearby enemies every second, dealing 1-40 damage.',
+      'Initially deals 300% damage. Damage erodes by 40% each time hitting an enemy (minimum 50%).',
   },
   succubus: {
     name: 'Succubus',
@@ -212,6 +215,40 @@ export const ballInformation: Record<Balls, BallInfo> = {
     name: 'Wraith',
     description: 'Freezes any enemy it passes through for 0.8 seconds.',
   },
+  landslide: {
+    name: 'Landslide',
+    description:
+      'Creates a landslide and destroys self upon hitting an enemy. The landslide lasts for 5 seconds and deals 20-30 damage per second to enemies within a 2 tile radius.',
+  },
+  steel: {
+    name: 'Steel',
+    description:
+      'Initially deals double damage but moves 50% slower. Damage increases by 10% each time it hits an enemy (max 300%).',
+  },
+  catapult: {
+    name: 'Catapult',
+    description:
+      'Launches 3-5 stone baby balls every 1.5 seconds, which are destroyed after hitting anything.',
+  },
+  brimstone: {
+    name: 'Brimstone',
+    description:
+      'Applies 1 stack of burn and poison every second to all enemies within a 2 tile radius (max 4 stacks). Burn deals 1-4 damage per stack per second and poison deals 2-3 damage per stack per second.',
+  },
+  banishedFlame: {
+    name: 'Banished Flame',
+    description:
+      'Add 1 stack of darkflame on hit for 2 seconds (max 6 stacks). Darkflame deals 1-30 damage per stack per second. When the darkflame goes out, it deals 1-100 to the enemy.',
+  },
+  fireworks: {
+    name: 'Fireworks',
+    description:
+      'Explodes into 3-6 fireworks. Fireworks target random enemies, dealing 20-30 damage and applying 1 stack of burn. Burnt units are dealt 7-11 damage per stack per second.',
+  },
+  laserCutter: {
+    name: 'Laser Cutter',
+    description: 'Constantly emits a laser in front of it, which deals 100-150 damage per second.',
+  },
   nosferatu: {
     name: 'Nosferatu',
     description:
@@ -224,8 +261,7 @@ export const ballInformation: Record<Balls, BallInfo> = {
   },
   broodMother: {
     name: 'Brood Mother',
-    description:
-      'Has a 25 percent chance of birthing a baby ball each time it hits an enemy.',
+    description: 'Has a 25 percent chance of birthing a baby ball each time it hits an enemy.',
   },
   burn: {
     name: 'Burn',
