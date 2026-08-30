@@ -1,5 +1,5 @@
 const CDN_SPRITE_SHEET_URL =
-  'https://asset.cloudinary.com/dnmknegr2/fbe3eb22ae020214244aafe10dac135a';
+  'https://res.cloudinary.com/dnmknegr2/image/upload/v1788126126/ballxpit-spritesheet_pgabjv.webp';
 export const SPRITE_SHEET_URL = import.meta.env.DEV
   ? '/assets/ballxpit-spritesheet.webp'
   : CDN_SPRITE_SHEET_URL;
