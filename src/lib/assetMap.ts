@@ -1,4 +1,8 @@
-export const SPRITE_SHEET_URL = '/assets/ballxpit-spritesheet.webp';
+const CDN_SPRITE_SHEET_URL =
+  'https://asset.cloudinary.com/dnmknegr2/fbe3eb22ae020214244aafe10dac135a';
+export const SPRITE_SHEET_URL = import.meta.env.DEV
+  ? '/assets/ballxpit-spritesheet.webp'
+  : CDN_SPRITE_SHEET_URL;
 export const SPRITE_COLS = 14;
 export const SPRITE_ROWS = 9;
 
