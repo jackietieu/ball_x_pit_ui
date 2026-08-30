@@ -22,7 +22,7 @@
         >
           {#each evolution.components as component, index}
             <GridItem passiveKey={component} x={0} y={0}>
-              <GridIcon src={assetMap.passiveIcons[component]} alt={component + ' passive'} />
+              <GridIcon sprite={assetMap.passiveIcons[component]} alt={component + ' passive'} />
             </GridItem>
 
             {#if index < evolution.components.length - 1}
@@ -34,7 +34,7 @@
 
           <GridItem passiveKey={evolution.result} x={0} y={0}>
             <GridIcon
-              src={assetMap.passiveIcons[evolution.result]}
+              sprite={assetMap.passiveIcons[evolution.result]}
               alt={evolution.result + ' passive'}
             />
           </GridItem>

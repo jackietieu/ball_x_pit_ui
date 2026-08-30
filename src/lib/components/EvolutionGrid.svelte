@@ -34,17 +34,17 @@
             <span style="color: var(--yellow); font-size: 2em;">X</span>
           {:else if cell.x === 0}
             <GridIcon
-              src={assetMap.ballIcons[yBall]}
+              sprite={assetMap.ballIcons[yBall]}
               alt={ballInformation[yBall]?.name + ' ball'}
             />
           {:else if cell.y === 0}
             <GridIcon
-              src={assetMap.ballIcons[xBall]}
+              sprite={assetMap.ballIcons[xBall]}
               alt={ballInformation[xBall]?.name + ' ball'}
             />
           {:else if evolution}
             <GridIcon
-              src={assetMap.ballIcons[evolution]}
+              sprite={assetMap.ballIcons[evolution]}
               alt={ballInformation[evolution]?.name + ' ball'}
             />
           {/if}

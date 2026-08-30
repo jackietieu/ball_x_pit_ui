@@ -35,7 +35,7 @@
           {#each evolution.components as component, index}
             <GridItem ballKey={component} x={0} y={0}>
               <GridIcon
-                src={assetMap.ballIcons[component]}
+                sprite={assetMap.ballIcons[component]}
                 alt={ballInformation[component]?.name + ' ball'}
               />
             </GridItem>
@@ -49,7 +49,7 @@
 
           <GridItem ballKey={evolution.result} x={0} y={0}>
             <GridIcon
-              src={assetMap.ballIcons[evolution.result]}
+              sprite={assetMap.ballIcons[evolution.result]}
               alt={ballInformation[evolution.result]?.name + ' ball'}
             />
           </GridItem>

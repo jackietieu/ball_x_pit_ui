@@ -2,7 +2,7 @@
 
 ## Game Assets
 
-The ball icon images (`/static/assets/`) used in this application are from the video game **BALL x PIT** and are the property of their respective copyright holders.
+The ball and passive icon images (combined into `/static/assets/ballxpit-spritesheet.webp`) used in this application are sourced from the [BALL x PIT Wiki](https://ballxpit.wiki.gg) and are from the video game **BALL x PIT**, property of their respective copyright holders.
 
 ### Copyright Notice
 

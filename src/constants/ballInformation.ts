@@ -335,4 +335,111 @@ export const ballInformation: Record<Balls, BallInfo> = {
     description:
       'Passes through enemies and slows them down by 30 percent for five seconds, but deals 25 percent less damage.',
   },
+  armageddon: {
+    name: 'Armageddon',
+    description:
+      'Creates a meteor shower upon hitting an enemy. The meteor shower lasts for 5 seconds and deals 30-50 damage / second to enemies within a 3 tile radius.',
+  },
+  babyBall: {
+    name: 'Baby Ball',
+    description: 'Base attack ball, no special abilities.',
+  },
+  banshee: {
+    name: 'Banshee',
+    description:
+      'Curses all enemies while on the field when launched. Cursed enemies are dealt 150-300 after being hit 6 times.',
+  },
+  drill: {
+    name: 'Drill',
+    description: 'Pierces enemies and deals 50% bonus damage until reaching the back of the field.',
+  },
+  elemental: {
+    name: 'Elemental',
+    description: 'Applies a random status effect (burn, slow, or freeze) to nearby enemies on hit.',
+  },
+  erosion: {
+    name: 'Erosion',
+    description:
+      "Passes through enemies. Deals 3% of enemy's current health as bonus damage on hit.",
+  },
+  flesh: {
+    name: 'Flesh',
+    description: 'Speed increases by 25% per bounce.',
+  },
+  fleshMound: {
+    name: 'Flesh Mound',
+    description: 'Emites a fleshy baby ball in a random direction every 1.0 seconds.',
+  },
+  heartSwallower: {
+    name: 'Heart Swallower',
+    description:
+      'Saps enemies on hit, with a 40% chance of stealing 1 health and reducing their attack damage by 20%. Lifesteal chance only applies once per enemy.',
+  },
+  lightningBug: {
+    name: 'Lightning Bug',
+    description:
+      'Spawns a lightning bug each time it hits an enemy. Lightning bugs attack a random enemy, dealing 1-80 damage to up to 3 nearby enemies.',
+  },
+  mosquitoKingdom: {
+    name: 'Mosquito Kingdom',
+    description:
+      'Spawns 1-2 mosquitos each time it hits an enemy. Mosquitos attack a random enemy, dealing 100-150 damage each. If a mosquito kills an enemy, they steal 2 health.',
+  },
+  offspring: {
+    name: 'Offspring',
+    description: 'Splits into a clone on hit 4 times.',
+  },
+  petrify: {
+    name: 'Petrify',
+    description:
+      'Petrifies all enemies within its sightline for 1.5 seconds when first launched, dealing 50-120.',
+  },
+  reaper: {
+    name: 'Reaper',
+    description: 'Has a 10% chance to kill enemies on impact, healing you for 5 health.',
+  },
+  sniper: {
+    name: 'Sniper',
+    description:
+      'Pierces enemies and shoots 3-7 sniper baby balls after hitting a wall. Sniper baby balls pierce enemies but are destroyed upon hitting a wall.',
+  },
+  time: {
+    name: 'Time',
+    description:
+      'Explodes into a time snare upon hitting an enemy, which stays on the field for 20 seconds and freezes enemies inside it.',
+  },
+  timeBomb: {
+    name: 'Time Bomb',
+    description:
+      'Throws a time bomb every few seconds, which explodes after a delay, dealing 80-120 damage to nearby enemies.',
+  },
+  timestop: {
+    name: 'Timestop',
+    description:
+      'Freezes everything on the field for 5.0 seconds but destroys itself after hitting an enemy. Has a 30 second cooldown before it can be shot again.',
+  },
+  tumor: {
+    name: 'Tumor',
+    description:
+      'Applies tumor on hit, Enemies with a tumor die after 40 seconds (exept for bosses).',
+  },
+  venom: {
+    name: 'Venom',
+    description:
+      'Applies 1 stack of venom on hit (max 8 stacks). Each stack deal 3-6 damage per second and slows down enemies.',
+  },
+  warp: {
+    name: 'Warp',
+    description: 'After each hit, warps to a random spot on the field and speeds up by 5%.',
+  },
+  xRay: {
+    name: 'X Ray',
+    description:
+      'Emits an X-shaped laser on hit, which deals 50-75 damage to enemies and applies 1 stack of radiation (max 5 stacks). Radiation causes enemies to receive 10% more damage from all sources per stack.',
+  },
+  zombie: {
+    name: 'Zombie',
+    description:
+      'Infects enemies on hit, giving them a 40% chance to turn into a friendly zombie on death.',
+  },
 };
