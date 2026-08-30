@@ -10,8 +10,10 @@
   }));
 </script>
 
-<div class="w-full">
-  <h2 class="text-xl font-bold mb-6 text-white text-center xl:text-left">Passive Evolutions</h2>
+<div class="panel w-full p-4">
+  <h2 class="text-xl font-bold mb-5 text-[var(--gold)] text-center xl:text-left tracking-wide">
+    Passive Evolutions
+  </h2>
 
   <div class="flex flex-col gap-1 items-center xl:items-start">
     {#each allPassiveEvolutionsFormatted as evolution}
@@ -22,7 +24,7 @@
         >
           {#each evolution.components as component, index}
             <GridItem passiveKey={component} x={0} y={0}>
-              <GridIcon src={assetMap.passiveIcons[component]} alt={component + ' passive'} />
+              <GridIcon sprite={assetMap.passiveIcons[component]} alt={component + ' passive'} />
             </GridItem>
 
             {#if index < evolution.components.length - 1}
@@ -34,7 +36,7 @@
 
           <GridItem passiveKey={evolution.result} x={0} y={0}>
             <GridIcon
-              src={assetMap.passiveIcons[evolution.result]}
+              sprite={assetMap.passiveIcons[evolution.result]}
               alt={evolution.result + ' passive'}
             />
           </GridItem>

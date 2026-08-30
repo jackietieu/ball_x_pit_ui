@@ -20,8 +20,8 @@
   ];
 </script>
 
-<div class="w-full">
-  <h2 class="text-xl font-bold mb-6 text-white text-center xl:text-left">
+<div class="panel w-full p-4">
+  <h2 class="text-xl font-bold mb-5 text-[var(--gold)] text-center xl:text-left tracking-wide">
     Advanced Ball Evolutions
   </h2>
 
@@ -35,7 +35,7 @@
           {#each evolution.components as component, index}
             <GridItem ballKey={component} x={0} y={0}>
               <GridIcon
-                src={assetMap.ballIcons[component]}
+                sprite={assetMap.ballIcons[component]}
                 alt={ballInformation[component]?.name + ' ball'}
               />
             </GridItem>
@@ -49,7 +49,7 @@
 
           <GridItem ballKey={evolution.result} x={0} y={0}>
             <GridIcon
-              src={assetMap.ballIcons[evolution.result]}
+              sprite={assetMap.ballIcons[evolution.result]}
               alt={ballInformation[evolution.result]?.name + ' ball'}
             />
           </GridItem>

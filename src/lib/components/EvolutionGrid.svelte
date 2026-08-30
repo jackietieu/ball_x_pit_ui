@@ -15,10 +15,7 @@
   );
 </script>
 
-<div
-  class="w-full overflow-x-auto touch-pan-x"
-  style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;"
->
+<div class="panel w-full overflow-x-auto touch-pan-x">
   <div
     class="grid gap-0 p-4 relative mx-auto"
     style="grid-template-columns: repeat({gridSize}, 3.25rem); width: max-content; overflow: visible;"
@@ -34,17 +31,17 @@
             <span style="color: var(--yellow); font-size: 2em;">X</span>
           {:else if cell.x === 0}
             <GridIcon
-              src={assetMap.ballIcons[yBall]}
+              sprite={assetMap.ballIcons[yBall]}
               alt={ballInformation[yBall]?.name + ' ball'}
             />
           {:else if cell.y === 0}
             <GridIcon
-              src={assetMap.ballIcons[xBall]}
+              sprite={assetMap.ballIcons[xBall]}
               alt={ballInformation[xBall]?.name + ' ball'}
             />
           {:else if evolution}
             <GridIcon
-              src={assetMap.ballIcons[evolution]}
+              sprite={assetMap.ballIcons[evolution]}
               alt={ballInformation[evolution]?.name + ' ball'}
             />
           {/if}
