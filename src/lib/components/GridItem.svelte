@@ -28,12 +28,12 @@
       'transition-all duration-200',
       'select-none',
       'text-sm font-medium',
+      'rounded-md',
       'border border-[var(--border-dark)]',
-      'hover:bg-[var(--bg-dark-hover)]',
+      'hover:bg-[var(--bg-dark-hover)] hover:border-[rgba(253,254,31,0.35)] hover:shadow-[0_0_14px_rgba(253,254,31,0.12)]',
+      'hover:z-10 relative',
       children ? 'text-gray-800' : 'text-gray-400',
-    ]
-      .filter(Boolean)
-      .join(' ')
+    ].join(' ')
   );
 
   const tooltip = $derived(

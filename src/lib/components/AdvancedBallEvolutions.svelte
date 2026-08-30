@@ -20,8 +20,8 @@
   ];
 </script>
 
-<div class="w-full">
-  <h2 class="text-xl font-bold mb-6 text-white text-center xl:text-left">
+<div class="panel w-full p-4">
+  <h2 class="text-xl font-bold mb-5 text-[var(--gold)] text-center xl:text-left tracking-wide">
     Advanced Ball Evolutions
   </h2>
 

@@ -1,4 +1,6 @@
-<footer class="mt-4 mb-4 text-center text-xs text-gray-500 max-w-2xl px-4 mx-auto">
+<footer
+  class="mt-8 mb-4 pt-6 text-center text-xs text-gray-500 max-w-2xl px-4 mx-auto border-t border-[rgba(99,60,36,0.4)]"
+>
   <p class="mb-2">All ball icons and related imagery are copyrighted material from BALL x PIT.</p>
   <p class="mb-4">
     This is an unofficial fan-made tool and is not affiliated with, endorsed by, or sponsored by the

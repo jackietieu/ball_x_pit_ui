@@ -5,11 +5,13 @@
   --bg-dark-hover: #452a30;
   --border-dark: #633c24;
   --yellow: #fdfe1f;
+  --gold: #e8b84b;
+  --text-warm: #d8c7b8;
 
+  color-scheme: dark;
   background: var(--bg-dark);
 }
 
-/* Prevent horizontal overflow on body but allow vertical scrolling */
 html,
 body {
   overflow-x: hidden;
@@ -19,10 +21,62 @@ body {
   min-height: 100vh;
 }
 
+/* Ambient page backdrop: warm glow behind the header, ember glow bottom-right */
+.app-bg {
+  background:
+    radial-gradient(70rem 34rem at 50% -6rem, rgba(232, 184, 75, 0.08), transparent 65%),
+    radial-gradient(46rem 26rem at 92% 108%, rgba(99, 60, 36, 0.22), transparent 70%),
+    var(--bg-dark);
+}
+
+/* Card surface for content sections */
+.panel {
+  background: rgba(69, 42, 48, 0.35);
+  border: 1px solid rgba(99, 60, 36, 0.55);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+::selection {
+  background: rgba(253, 254, 31, 0.85);
+  color: var(--bg-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Thin themed scrollbars everywhere */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-dark) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #7d4e2e;
+}
+
 /* Improve touch scrolling on mobile devices */
 .overflow-x-auto {
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
   scroll-behavior: smooth;
   /* Ensure touch scrolling works in both directions */
   touch-action: pan-x;
@@ -30,26 +84,8 @@ body {
   overscroll-behavior-x: contain;
 }
 
-/* Hide scrollbar on mobile while keeping functionality */
-.overflow-x-auto::-webkit-scrollbar {
-  height: 8px;
-}
-
-.overflow-x-auto::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.overflow-x-auto::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-.overflow-x-auto::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
 @media (max-width: 768px) {
-  .overflow-x-auto::-webkit-scrollbar {
+  *::-webkit-scrollbar {
     height: 4px;
   }
 }

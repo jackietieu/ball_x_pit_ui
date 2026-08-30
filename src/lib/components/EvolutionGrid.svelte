@@ -15,10 +15,7 @@
   );
 </script>
 
-<div
-  class="w-full overflow-x-auto touch-pan-x"
-  style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;"
->
+<div class="panel w-full overflow-x-auto touch-pan-x">
   <div
     class="grid gap-0 p-4 relative mx-auto"
     style="grid-template-columns: repeat({gridSize}, 3.25rem); width: max-content; overflow: visible;"
