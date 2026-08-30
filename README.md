@@ -19,6 +19,23 @@ See [ASSETS.md](./ASSETS.md) for full copyright and attribution information.
 - Detailed tooltips with ball descriptions
 - Responsive design
 
+## Analytics
+
+This site uses [Umami](https://umami.is) for privacy-friendly, cookie-free web analytics. The tracking script is loaded in [`src/app.html`](./src/app.html):
+
+```html
+<script
+  defer
+  src="https://umami-fork-tau.vercel.app/script.js"
+  data-website-id="3767a7a2-652a-48a8-94d0-ea57a26935e3"
+></script>
+```
+
+- **Script host**: `https://umami-fork-tau.vercel.app/script.js` (self-hosted Umami fork deployed on Vercel)
+- **Website ID**: `3767a7a2-652a-48a8-94d0-ea57a26935e3`
+
+The script is loaded with `defer`, so it never blocks page rendering. Umami does not set cookies or collect personal data, so no consent banner is required.
+
 ## Developing
 
 Once you've installed dependencies with `npm install`, start a development server:
